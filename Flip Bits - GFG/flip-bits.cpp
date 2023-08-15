@@ -7,16 +7,52 @@ using namespace std;
 
 class Solution{
     public:
-    int maxOnes(int a[], int n)
-    {
-          int z=0,o=0,mx=0;
-    for(int i=0;i<n;i++){
-        if(a[i]==0) z++;
-        else{z--;o++;}
-        mx=max(z,mx);
-        if(z<0) z=0;
+    int maxOnes(int arr[], int n){
+    int one_s = 0 , sum =  0 ,  maxi = 0;
+
+    for(int i = 0 ; i< n ; i++){
+
+        if(arr[i]==1){
+
+            one_s++;
+
+        }
+
     }
-    return mx+o;
+
+
+    for(int i = 0 ; i<n ; i++){
+
+        if(arr[i]==0){
+
+            arr[i] = 1;
+
+        }else{
+
+            arr[i] = -1;
+
+        }
+
+    }
+ 
+
+    for(int i  = 0 ; i<n ; i++){
+
+        sum = sum + arr[i];
+
+        if(sum<0){
+
+            sum = 0;
+
+        }
+
+        maxi = max(sum , maxi);
+
+    }
+
+ 
+
+    return  (maxi+one_s);
     }
 };
 
