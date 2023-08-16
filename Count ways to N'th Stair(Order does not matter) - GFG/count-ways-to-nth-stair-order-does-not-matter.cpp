@@ -8,7 +8,7 @@ class Solution{
 		int nthStair(int n){
 	  int count=0;
         int ones=0;
-        while(ones<n+1){
+        while(ones<=n){
             int temp=n-ones;
             if(temp%2==0){
                 count++;
