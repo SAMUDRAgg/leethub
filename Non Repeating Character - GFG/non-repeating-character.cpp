@@ -11,18 +11,18 @@ class Solution
     //Function to find the first non-repeating character in a string.
     char nonrepeatingCharacter(string S)
     {
-        char ans;
-       map<char,int> mp;
+       unordered_map<char,int> mp;
        for(int i=0;i<S.length();i++){
            mp[S[i]]++;
        }
-       
        for(int i=0;i<S.length();i++){
            if(mp[S[i]]==1){
                return S[i];
            }
+               
+           
        }
-     return '$';
+       return '$';
        
     }
 
