@@ -8,21 +8,20 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:
-	string removeDuplicates(string s) {
-	    unordered_map<char,int> exists;
-  int index = 0;
-  string ans;
-  
-  for(int i=0;i<s.length();i++){
-    if(exists[s[i]]==0)
-    {
-      ans.push_back(s[i]);
-      exists[s[i]]++;
-    }
-  }
-  
-  
-  return ans;
+	string removeDuplicates(string str) {
+	    string ans="";
+       unordered_map<char,int> mp;
+       for(int i=0;i<str.length();i++){
+       mp[str[i]]++;
+	}
+	
+      for(int i=0;i<str.length();i++){
+          if(mp[str[i]]!=0){
+              ans.push_back(str[i]);
+              mp[str[i]]=0;
+          }
+      }
+      return ans;
 	}
 };
 
