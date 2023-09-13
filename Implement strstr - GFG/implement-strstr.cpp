@@ -26,10 +26,8 @@ int main()
 //Function to locate the occurrence of the string x in the string s.
 int strstr(string s, string x)
 {
-     if(s.length()==0){
-         return -1;
-     }
-     
-     int fount =s.find(x);
-     return fount;
+    if(s.length()==0){
+        return -1;
+    }
+   return s.find(x);
 }
