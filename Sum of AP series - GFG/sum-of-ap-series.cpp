@@ -11,11 +11,11 @@ class Solution
 	public:
 		long sum_of_ap(long n,long a, long d)
 		{
-		    int ans=0;
+		    long long int sum=0;
 		    for(int i=0;i<n;i++){
-		        ans+=(a+i*d);
+		       sum+=a+(i*d);
 		    }
-		    return ans;
+		    return sum;
 		}
 };
 
