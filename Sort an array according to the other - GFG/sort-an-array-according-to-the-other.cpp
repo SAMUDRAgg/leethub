@@ -20,11 +20,12 @@ class Solution{
     vector<int> sortA1ByA2(vector<int> A1, int N, vector<int> A2, int M) 
     {
         sort(A1.begin(),A1.end());
-        unordered_map<int,int> mp;
         vector<int> v;
+        unordered_map<int,int> mp;
         for(int i=0;i<N;i++){
             mp[A1[i]]++;
         }
+        
         for(int i=0;i<M;i++){
             if(mp[A2[i]]!=0){
                 while(0<mp[A2[i]]){
