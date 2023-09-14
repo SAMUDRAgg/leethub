@@ -6,13 +6,13 @@ using namespace std;
 class Solution{
 public:
     int countFactors(int N){
-        int count=0;
-        for(int i=1;i<=N;i++){
-            if(N%i==0){
-                count++;
-            }
-        }
-        return count;
+        int count=1;
+      for(int i=2;i<=N;i++){
+          if(N%i==0){
+              count++;
+          }
+      }
+      return count;
     }
 };
 
