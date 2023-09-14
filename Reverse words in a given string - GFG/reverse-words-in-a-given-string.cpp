@@ -10,21 +10,18 @@ class Solution
     //Function to reverse words in a given string.
     string reverseWords(string S) 
     { 
-             string ans; string word;
-             for(int i=0;i<S.length();i++){
-                 if(S[i]=='.'){
-                 ans='.'+word+ans;
-                 word="";
-             }else{
-                 word=word+S[i];
-             }
-           
-             
-             }
-               ans=word+ans;
-             return ans;
-             
-             
+        string word="";
+        string ans="";
+        for(int i=0;i<S.length();i++){
+            if(S[i]=='.'){
+                ans='.'+word+ans;
+                word="";
+            }else{
+                word=word+S[i];
+            }
+        }
+        ans=word+ans;
+        return ans;
     } 
 };
 
