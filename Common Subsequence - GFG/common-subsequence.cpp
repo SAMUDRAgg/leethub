@@ -12,7 +12,6 @@ public:
 	bool commonSubseq (string a, string b)
 	{
 	    for(int i=0;i<a.length();i++){
-	        
 	        if(a.find(b[i])!=-1){
 	            return true;
 	        }
@@ -20,7 +19,6 @@ public:
 	    return false;
 	}
 };
-
 
 //{ Driver Code Starts.
 
