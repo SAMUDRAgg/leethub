@@ -9,31 +9,31 @@ using namespace std;
 
 class Solution {
   public:
-    bool isPrime(int n){
-       if(n<2)
-        return false;
-       if(n==2 || n==3){
-           return true;
-       }
-       if(n%2 ==0 || n%3== 0)
-        return false;
-       for(int i=5; i*i <=n; i+= 6){
-           if(n%i ==0 || n%(i+2) ==0){
-               return false;
-           }
-       }
-       return true;
-   }
-   int count3DivNums(long long L, long long R) {
+   bool isPrime(int num) {
+      int i;
+if(num<=1) return false;
+     
+      for (i=2; i<=sqrt(num); i++) {
+          if (num%i==0) {
+              return false;
+          }
+      }
       
-       int res = 0;
-       for(int i=1; i*i<=R; i++){
-           int a = i*i;
-           if( isPrime(i) &&( L<=a && a<=R) ){
-               res++;
+      
+          return true;
+      
+  }
+   int count3DivNums(long long L, long long R) {
+       int count=0;
+       for(int i=ceil(sqrt(L)); i<=sqrt(R);i++){
+           if(isPrime(i)){
+               count++;
            }
+           
+           
        }
-       return res;
+
+      return count;
    }
 };
 
