@@ -11,20 +11,16 @@ using namespace std;
 class Solution{
 public:
     int remove_duplicate(int a[],int n){
-        int j=0;
-        for(int i=0;i<n;i++)
-        {
-            if(a[j]!=a[i])
-            {
-                a[j+1]=a[i];
-                j++;
-            }
-        }
-        return j+1;
-    
+       int j=0;
+       for(int i=0;i<n;i++){
+           if(a[j]!=a[i]){
+               a[j+1]=a[i];
+               j++;
+           }
+       }
+       return j+1;
     }
 };
-
 
 //{ Driver Code Starts.
 int main()
