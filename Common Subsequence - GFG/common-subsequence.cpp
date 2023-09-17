@@ -13,10 +13,10 @@ public:
 	{
 	    for(int i=0;i<a.length();i++){
 	        if(a.find(b[i])!=-1){
-	            return true;
+	            return 1;
 	        }
 	    }
-	    return false;
+	    return 0;
 	}
 };
 
