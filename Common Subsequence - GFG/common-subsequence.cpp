@@ -11,12 +11,16 @@ class Solution{
 public:
 	bool commonSubseq (string a, string b)
 	{
-	    for(int i=0;i<a.length();i++){
-	        if(a.find(b[i])!=-1){
-	            return 1;
-	        }
-	    }
-	    return 0;
+	   unordered_map<char,int> mp;
+	   for(int i=0;i<a.length();i++){
+	       mp[a[i]]++;
+	   }
+	   for(int i=0;i<b.length();i++){
+	       if(mp[b[i]]!=0){
+	           return 1;
+	       }
+	   }
+	   return 0;
 	}
 };
 
