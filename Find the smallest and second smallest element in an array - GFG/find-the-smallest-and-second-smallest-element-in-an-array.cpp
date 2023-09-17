@@ -27,19 +27,15 @@ int main() {
 
 
 vector<int> minAnd2ndMin(int a[], int n) {
-    
     sort(a,a+n);
-    vector<int> v;
+    vector<int> ans;
     for(int i=0;i<n-1;i++){
         if(a[i]!=a[i+1]){
-            v.push_back(a[i]);
-            v.push_back(a[i+1]);  
-            return v;
-           
+            ans.push_back(a[i]);
+            ans.push_back(a[i+1]);
+            return ans;
         }
     }
     
-    
-    return{-1};
- 
+   return{-1};
 }
