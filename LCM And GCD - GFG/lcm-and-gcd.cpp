@@ -5,7 +5,7 @@ using namespace std;
 // } Driver Code Ends
 class Solution {
   public:
-  int gcd(int a, int b){
+  long long int gcd (long long a,long long b){
       if(b==0){
           return a;
       }
@@ -13,15 +13,13 @@ class Solution {
   }
     vector<long long> lcmAndGcd(long long A , long long B) {
         
-        
         long long int g=gcd(A,B);
-        long long int lcm=A*B/g;
+       long long int l=(A*B)/g;
         vector<long long int> v;
-         v.push_back(lcm);
+        v.push_back(l);
         v.push_back(g);
        
-        return v;
-        
+         return v;
     }
 };
 
