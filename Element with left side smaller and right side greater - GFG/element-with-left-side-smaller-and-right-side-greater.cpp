@@ -20,6 +20,8 @@ int main() {
 // } Driver Code Ends
 
 
+
+
 int findElement(int arr[], int n) {
     int lLargest[n];
     int rSmallest[n];
