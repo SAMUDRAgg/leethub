@@ -16,9 +16,9 @@ class Solution{
         for(int i=0;i<n;i++){
             if(mp[arr[i]]==1){
                 return arr[i];
-                
             }
         }
+        
         return 0;
         
     } 
