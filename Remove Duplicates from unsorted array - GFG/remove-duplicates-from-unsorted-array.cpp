@@ -9,23 +9,18 @@ using namespace std;
 class Solution{
     public:
     vector<int> removeDuplicate(int A[], int N) {
-           unordered_map<int,int>mp;
-        for(int i=0;i<N;i++)
-        {
+        unordered_map<int,int> mp;
+        vector<int> v;
+        for(int i=0;i<N;i++){
             mp[A[i]]++;
         }
-        vector<int>ans;
-        for(int i=0;i<N;i++)
-        {
-            if(mp[A[i]]>=1)
-            {
-                ans.push_back(A[i]);
+        for(int i=0;i<N;i++){
+            if(mp[A[i]]!=0){
+                v.push_back(A[i]);
                 mp[A[i]]=0;
             }
         }
-        
-            
-        return ans;
+        return v;
     }
 };
 
