@@ -23,10 +23,10 @@ class Solution
            
        }
        else{
-           if(num!=0){
+           
                sum=num+sum;
                num=0;
-           }
+           
        }
    }
     	return sum+num;
