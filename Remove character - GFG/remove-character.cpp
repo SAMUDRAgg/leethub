@@ -8,15 +8,22 @@ using namespace std;
 // User function template for c++
 class Solution {
   public:
-  
     string removeChars(string s1, string s2) {
-        string ans="";
+       
+       string sh;
+       unordered_map<char,int> mp;
+       for(int i=0;i<s2.length();i++){
+           mp[s2[i]]++;
+       }
        for(int i=0;i<s1.length();i++){
-           if(s2.find(s1[i])==-1){
-               ans.push_back(s1[i]);
+           if(mp[s1[i]]==0){
+               sh.push_back(s1[i]);
+              
            }
        }
-       return ans;
+       return sh;
+       
+       
     }
 };
 
