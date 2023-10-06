@@ -15,12 +15,12 @@ class Solution
        for(int i=0;i<S.length();i++){
            mp[S[i]]++;
        }
+       char ch;
        for(int i=0;i<S.length();i++){
            if(mp[S[i]]==1){
-               return S[i];
+               ch=S[i];
+               return ch;
            }
-               
-           
        }
        return '$';
        
