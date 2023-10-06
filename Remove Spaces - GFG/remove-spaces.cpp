@@ -8,13 +8,13 @@ class Solution
   public:
     string modify (string s)
     {
-      string ans="";
-      for(int i=0;i<s.size();i++){
-          if(s[i]!=' '){
-              ans.push_back(s[i]);
-          }
-      }
-      return ans;
+        string sh;
+        for(int i=0;i<s.length();i++){
+            if(s[i]!=' '){
+                sh.push_back(s[i]);
+            }
+        }
+        return sh;
     }
 };
 
