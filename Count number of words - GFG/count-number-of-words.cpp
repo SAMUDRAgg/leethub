@@ -21,22 +21,18 @@ int main()
 
 int countWords(string s)
 {
-       int count=0;
-    int word=0;
-    int n=s.size();
-    for(int i=0;i<n;i++){
-        if((s[i]=='\\' && s[i+1]=='n') || (s[i]=='\\' && s[i+1]=='t')){
-            word=0;
-            i++;
-        }
-        else if(s[i]==' '){
-            word=0;
-        }
-        else if(word==0){
-            count++;
-            word=1;
-        }
-    }
-    
-    return count;
+ int w=0;
+ int count=0;
+ for(int i=0;i<s.length();i++){
+     if((s[i]=='\\'&&s[i+1]=='n')||(s[i]=='\\'&&s[i+1]=='t')){
+         w=0;
+         i++;
+     }else if(s[i]==' '){
+         w=0;
+     }else if(w==0){
+         w=1;
+         count++;
+     }
+ }
+ return count;
 }
