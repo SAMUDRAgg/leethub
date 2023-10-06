@@ -6,26 +6,24 @@ using namespace std;
 
 
 class Solution{
-    // Time : O(|s|) ; |s| is length of the string s
-    // Space : O(|s|)
     public:
     string encryptString(string s){
-        int n = s.size();
-        string ans = "";
-        for(int i = 0; i < n; i++) {
-            int cnt = 1;
-            while(s[i] == s[i+1]) {
-                cnt++;
-                i++;
-            }
-            ans += s[i];
-            ans += to_string(cnt);
-        }
-        reverse(ans.begin(), ans.end());
-        return ans;
+ string ans;
+ 
+ 
+   for(int i=0;i<s.length();i++){
+       int count=1;
+       while(s[i]==s[i+1]){
+           count ++;
+           i++;
+       }
+       ans+=s[i];
+       ans+=to_string(count);
+   }
+   reverse(ans.begin(),ans.end());
+   return ans;
     }
 };
-
 
 //{ Driver Code Starts.
 int main()
