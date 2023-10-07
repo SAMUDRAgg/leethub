@@ -10,29 +10,24 @@ class Solution{
     /*you are required to complete this method*/
     int convertFive(int n)
     {
-     vector<int> ans;
-     int rem=0;
-     
-     while(n!=0){
-         rem=n%10;
-         ans.push_back(rem);
-         n=n/10;
-     }
-     
-     for(int i=0;i<ans.size();i++){
-         if(ans[i]==0){
-             ans[i]=5;
-         }
-     }
-     long long out=0;
-     reverse(ans.begin(),ans.end());
-     
-     for(int i=0;i<ans.size();i++){
-         out=out*10+ans[i];
-     }
-     return out;
-      
-    
+       int ans=0;
+       vector<int> v;
+       while(n!=0){
+           v.push_back(n%10);
+           n=n/10;
+       }
+       
+       for(int i=0;i<v.size();i++){
+           if(v[i]==0){
+               v[i]=5;
+           }
+       }
+       reverse(v.begin(),v.end());
+       for(int i=0;i<v.size();i++){
+           ans=ans*10+v[i];
+       }
+       
+       return ans;
     }
 };
 
