@@ -9,13 +9,12 @@ using namespace std;
 
 void toBinary(int N)
 {
-    int bin=0; int rem=0; int i=1;
+    int rem=0; int i=1;int bin=0;
     while(N!=0){
         rem=N%2;
         bin=bin+rem*i;
         i*=10;
-        N=N/2;
-        
+        N/=2;
     }
     cout<<bin;
         
