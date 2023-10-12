@@ -6,14 +6,14 @@ using namespace std;
 class Solution {
   public:
     int binary_to_decimal(string str) {
-        int ans=0; int j=0;
-        for(int i=str.length()-1;0<=i;i--){
+        int dec=0;int j=0;
+        for(int i=str.length()-1;i>=0;i--){
             if(str[i]=='1'){
-                ans=ans+pow(2,j);
+                dec=dec+pow(2,j);
             }
             j++;
         }
-        return ans;
+        return dec;
     }
 };
 
