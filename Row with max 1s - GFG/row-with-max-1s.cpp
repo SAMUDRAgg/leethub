@@ -6,11 +6,11 @@ using namespace std;
 //User function template for C++
 class Solution{
 public:
-	int rowWithMax1s(vector<vector<int> > arr, int n, int m) {
-	   for(int i=0; i<m; i++) {
-	        for(int j=0; j<n; j++){
-	            if(arr[j][i] == 1)
-	                return j;
+	int rowWithMax1s(vector<vector<int> > arr, int r, int c) {
+	   for(int col=0; col<c; col++) {
+	        for(int row=0; row<r; row++){
+	            if(arr[row][col] == 1)
+	                return row;
 	        }
 	    }
 	    
