@@ -19,7 +19,6 @@ void print(int ar[], int n)
         cout<<ar[i]<<" ";
     }
     
-    
 }
 
 //{ Driver Code Starts.
