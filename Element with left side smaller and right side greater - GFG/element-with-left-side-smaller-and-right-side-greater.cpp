@@ -22,6 +22,8 @@ int main() {
 
 
 
+
+
 int findElement(int arr[], int n) {
     int lLargest[n];
     int rSmallest[n];
@@ -42,9 +44,10 @@ int findElement(int arr[], int n) {
         rSmallest[i] = s;
     }
     
-    for (int i = 1; i<n-1; i++){
-        if (rSmallest[i] == lLargest[i])
+     for(int i=1;i<n-1;i++){
+        if( lLargest[i]==rSmallest[i]){
             return rSmallest[i];
+        }
     }
     return -1;
 }
