@@ -26,17 +26,19 @@ int findElement(int arr[], int n) {
     
 //     int mini[n];
 //     int maxi[n];
-//     int l=arr[0];
-//     int s=arr[n-1];
-//     mini[n-1]=arr[n-1];
-//     maxi[0]=arr[0];
-//     int ans=-1;
+  
+//      maxi[0]=arr[0];
+//       mini[n-1]=arr[n-1];
+   
+   
+//       int l=arr[0];
 //     for(int i=1;i<n;i++){
 //         if(arr[i]>l){
 //             l=arr[i];
 //             maxi[i]=l;
 //         }
 //     }
+//   int s=arr[n-1];
 //     for(int i=n-2;i>=0;i--){
 //         if(s>arr[i]){
 //             s=arr[i];
@@ -45,7 +47,7 @@ int findElement(int arr[], int n) {
 //     }
 //     for(int i=1;i<n-1;i++){
 //         if(mini[i]==maxi[i]){
-//             return maxi[i];
+//             return mini[i];
 //         }
 //     }
     
