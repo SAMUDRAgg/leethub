@@ -22,11 +22,39 @@ int main() {
 
 
 
-
-
-
-
 int findElement(int arr[], int n) {
+    
+//     int mini[n];
+//     int maxi[n];
+//     int l=arr[0];
+//     int s=arr[n-1];
+//     mini[n-1]=arr[n-1];
+//     maxi[0]=arr[0];
+//     int ans=-1;
+//     for(int i=1;i<n;i++){
+//         if(arr[i]>l){
+//             l=arr[i];
+//             maxi[i]=l;
+//         }
+//     }
+//     for(int i=n-2;i>=0;i--){
+//         if(s>arr[i]){
+//             s=arr[i];
+//             mini[i]=s;
+//         }
+//     }
+//     for(int i=1;i<n-1;i++){
+//         if(mini[i]==maxi[i]){
+//             return maxi[i];
+//         }
+//     }
+    
+    
+    
+    
+//  return -1;
+    
+   
     int mini[n];
     int maxi[n];
     maxi[0] = arr[0];
@@ -52,4 +80,5 @@ int findElement(int arr[], int n) {
         }
     }
     return -1;
+
 }
